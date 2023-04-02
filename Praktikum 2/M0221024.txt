@@ -1,0 +1,44 @@
+Jawaban M0221024 Ralvin Adrian - 6182101024
+
+1. .class_1 {}
+
+2a. .main {}
+2b. #main_id_2 {}
+2c. .main p {}
+2d. #main_id_2 p {}
+
+3 p,ul li,div a {}
+
+4a. .sub_main_1 a {}
+4b. .sub_main_1 a, .sub_main_2 a {}
+
+5a  div ul li.point_2 {}
+	
+5b. div>ul>li.point_2 {}
+	
+5c. li+.point_2 {}
+
+6. .sub_1 {}
+
+7a. table tr td:nth-child(2) {}
+7b. <td>sixth</td>
+
+8a. <li>First</li>, <li>Third</li>, <li>Fifth</li>
+8b. a ul li:not(:last-of-type)
+
+9a. ul li li {}
+9b. ul>li:first-of-type~li:nth-of-type(2),
+    ul>li:first-of-type~li:nth-of-type(3) {}
+	untuk soal 9b ini dikarenakan nested tag yang kurang baik maka tidak ditemukan selector yang memilih third and fifth tanpa menyertakan fourth item.
+
+10a. input[name="nama"] {}
+10b. input[disabled] {} 
+10c. select option~option {}
+
+11a. div>p {}
+11b. h3+ul>li:first-child,
+        h3+ul>li:first-child+li {}
+11c. ul:nth-of-type(2) li:first-of-type,
+        ul:nth-of-type(2) li:last-of-type,
+        ul:last-of-type li:first-of-type,
+        ul:last-of-type li:last-of-type {}

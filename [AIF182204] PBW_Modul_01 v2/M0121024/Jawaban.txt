@@ -1,0 +1,6 @@
+Jawaban Praktikum PBW Week 2
+Ralvin Adrian - 6182101024
+
+1. semua teks yang sebelumnya ada dalam blok pre tersebut akan menjadi satu baris dan karakter enter / spasi diabaikan
+2. ol : ordered list, ul : unordered list (ordered : list terurut, unordered : list tidak berurutan)
+maka berdasarkan kedua tag tersebut, item dalam list akan menjadi terurut / tidak berurutan sesuai tag yang digunakan

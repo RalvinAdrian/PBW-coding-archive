@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+#main {
+    border: 2px solid black;
+    /* height: 100px; */
+    box-sizing:content-box;
+}
+
+
+#main > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:100px;
+    /* width: 600px; */
+}
+
+#main>div .box{
+    border: 2px solid gray;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+}
+
+#main>div .box:nth-child(even){
+    background-color: blue;
+    font-style: italic;
+}
+
+#main>div .box:nth-child(odd){
+    background-color: yellow;
+    font-weight: bold;
+} 

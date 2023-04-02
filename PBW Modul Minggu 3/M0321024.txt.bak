@@ -1,0 +1,16 @@
+2a. karena secara default 
+2b.
+
+4. #main>div {border: 2px solid gray;}
+
+5. dengan css display:inline-block maka elemen div tersebut akan menjadi elemen yang sebaris(inline) tapi masih menyimpan sifat elemen block
+
+6. #main>div {display:flex;}, dan default flex-direction adalah row (baris) tapi tidak perlu ditambahkan karena merupakan default behaviour dari flexbox
+
+7. #main>div .box:nth-child(odd atau even)
+
+8. menambah css * {box-sizing:border-box};
+
+10. 
+ya, child element dari flexbox tersebut menjadi berjarak di kanan dan kirinya
+div tersebut menyusut karena ukuran containernya di specify sebesar 600px;

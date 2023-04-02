@@ -1,0 +1,105 @@
+/*  Author : Ralvin Adrian 
+    NPM : 6182101024
+    Version : 1.0
+    Date : 15/03/2023
+*/
+
+* {
+    box-sizing: border-box;
+    color: #555;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+textarea, input {outline: none;}
+body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    background-color: #ddd;
+}
+
+main {  
+    /*Delete this to make it responsive*/
+    width: 850px; 
+    /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+    margin: auto;
+    text-align:  center;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: max-content max-content max-content;
+    gap: 0;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header"
+      "form form"
+      "form form"
+      "footer footer";
+      background-color: #eaeaeaea;
+}
+  
+main header {
+    grid-area:header;
+    background-color: lightblue;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+}
+main section {
+    width: 100%;
+    height: 100%;
+    padding: 1.8rem;
+    border-top: .2rem solid #ddd;
+    border-bottom: .2rem solid #ddd;
+}
+
+body > main > section:nth-child(2) {
+    border-right: .2rem solid #ddd;
+}
+body > main > section:nth-child(3) {
+    border-left: .2rem solid #ddd;
+}
+
+section form {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-gap:0.4rem 0;
+    grid-template-rows:
+    repeat(5,2.5rem);
+}
+
+label {
+    display: grid;
+    text-align: left;
+    background-color: lightblue;
+    align-items: center;
+    padding: .4rem;
+}
+input {
+   border: none;
+   background-color: white;
+}
+input[type="Submit"]{
+    display: grid;
+    grid-column: span 2;
+    background-color: lightblue;
+    padding: .5rem 0;
+}
+input[value="Sign In"]{
+    grid-row: 5/5;
+}
+
+footer { 
+    grid-area: footer; 
+    padding: .7rem 0;
+    background-color: lightblue;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+footer a {
+    align-items: center;
+    margin: 0 .5rem;
+}

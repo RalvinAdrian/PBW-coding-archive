@@ -1,0 +1,40 @@
+Jawaban Praktikum Minggu 2 - Ralvin Adrian 6182101024
+
+1. Mengapa input-input tersebut harus disimpan diantara tag <form></form>?
+
+Karena untuk memasukan data berupa form ke database memerlukan tag tersebut, dimana ada atribut action="" yang dapat berkomunikasi dengan backend supaya isi form dapat diterima
+
+2. Jelaskan bagaimana seluruh data pada form ini akan diambil dan dikirim ke server?
+
+menggunakan atribut action="" yang diisi dengan file js / php yang akan menerima isi dari form tersebut disertai atribut method="GET" supaya data yang dikirimkan ter-enkripsi dalam protokol https
+
+
+3. Apa yang terjadi ketika tombol tersebut di-klik?
+
+Tidak terjadi apa-apa
+
+4. Apa yang terjadi ketika tombol tersebut di-klik? Kesimpulan apa yang dapat diambil dari perubahan tersebut?
+
+url halaman berubah, jadi berisi properti dalam form tersebut
+
+5. Apa yang terjadi ketika tombol tersebut di-klik?
+
+tidak terjadi apa-apa
+
+6. Apa yang terjadi ketika tombol tersebut di-klik?
+
+url halaman berubah, jadi berisi properti dalam form tersebut
+
+7. Apa kesimpulan yang dapat diambil dari perbedaan kode di nomor 7 dan nomor 9?
+
+tag button dan input-type jika menggunakan type submit akan melakukan hal yang sama, sedangkan type="button" harus dispesifikasikan lagi untuk keperluan lain yang lebih spesifik
+
+8. Apa perbedaannya? Kesimpulan apa yang dapat diambil?
+
+method GET mengekspos isi form ke dalam url halaman tersebut, sedangkan POST hanya menunjukkan halaman error karena field action belum diisi
+
+9. Menurut anda mana yang lebih baik antara method “GET” dan “POST”? Jelaskan
+
+POST lebih aman karena data dari form ter-enkripsi melalui protokol https
+
+sedangkan GET tidak ter-enkripsi dan jumlah karakter url dibatasi hanya sebanyak 3000 saja 

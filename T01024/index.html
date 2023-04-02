@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koobface</title>
+</head>
+
+<body>
+    <h1>Selamat datang di registrasi situs Koobface!</h1>
+    <p>Untuk menyelesaikan registrasi, silahkan mengisi form di bawah ini:</p>
+    <form action="" method="POST">
+        <label for="firstname">First Name : </label>
+        <br>
+        <input type="text" name="firstname" id="firstname"><br>
+        <label for="lastname">Last Name : </label>
+        <br>
+        <input type="text" name="firstname" id="firstname"><br>
+        <label for="birthdate">Tanggal Lahir : </label>
+        <br>
+        <input type="date" name="birthdate" id="birthdate"><br>
+        <label for="password">Password</label>
+        <br>
+        <input type="password" name="password" id="password"><br>
+        <label for="password-validation">Reenter password </label>
+        <br>
+        <input type="password" name="password-validation" id="password-validation"><br>
+        <label for="aboutme">About me: </label>
+        <br>
+        <textarea style="resize: none;" name="aboutme" id="aboutme" cols="25" rows="4"></textarea>
+        <br>
+        <label for="gender">Jenis Kelamin
+
+        </label>
+        <br>
+
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">female</label>
+        <input type="radio" id="nonb" name="gender" value="nonb">
+        <label for="nonb">Non-Binary</label>
+        <br>
+        <label for="interest">Interest:
+        </label>
+        <br>
+        <input type="checkbox" id="interest" name="Networking">
+        <label for="Networking">Networking</label>
+        <input type="checkbox" id="interest" name="Gaming">
+        <label for="Gaming">Gaming</label>
+        <input type="checkbox" id="interest" name="Adventure">
+        <label for="Adventure">Adventure</label>
+        <br>
+        <label for="country">Country:
+            <select name="country" id="country">
+                <option value="BOL">Bolivia</option>
+                <option value="CH">China</option>
+                <option value="IN">India</option>
+                <option value="INA">Indonesia</option>
+                <option value="UK">United Kingdom</option>
+                <option value="US">United States</option>
+            </select>
+        </label>
+        <br>
+        <label for="picture">Upload your picture:</label>
+        <input type="file" name="picture" id="picture">
+        <br>
+        <!-- <input type="button" value="Submit"> -->
+        <!-- <input type="submit" value="Submit"> -->
+        <button type="submit">Submit</button>
+        <!-- <button type="button">Submit</button> -->
+    </form>
+</body>
+
+</html>
