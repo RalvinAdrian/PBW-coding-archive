@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Javascript 2</title>
+	<link rel="stylesheet" type="text/css" href="assets/styles.css">
+	<script type="text/javascript" src="assets/register.js"></script>
+	<script type="text/javascript" src="assets/script.js"></script>
+</head>
+
+<body>
+	<h1>Register</h1>
+	<form id="register_form" action="server.php" method="post">
+		<fieldset>
+			<legend>Register Form</legend>
+			<div id="form_container">
+				<label>
+					<span class="form-label">Username</span>
+					<span> : </span>
+					<input class="form-control" type="text" name="username" required>
+					<img src="assets/images/check.png" class="check_icons hidden">
+				</label>
+				<label>
+					<span class="form-label">Password</span>
+					<span> : </span>
+					<input class="form-control" type="password" name="password" required>
+					<img src="assets/images/check.png" class="check_icons hidden">
+				</label>
+				<label>
+					<span class="form-label">Date of Birth</span>
+					<span> : </span>
+					<div class="form-control" id="date_form">
+						<select name="day"></select>
+						<select name="month"></select>
+						<select name="year"></select>
+					</div>
+				</label>
+				<label>
+					<span class="form-label">Hobby</span>
+					<span> : </span>
+					<div class="form-control">
+						<label>
+							<input type="checkbox" name="hobby" value="Gaming">
+							Gaming
+						</label>
+						<label>
+							<input type="checkbox" name="hobby" value="Networking">
+							Networking
+						</label>
+						<label>
+							<input type="checkbox" name="hobby" value="Reading">
+							Reading
+						</label>
+					</div>
+				</label>
+				<div class="center-button">
+					<input type="button" name="check" value="Check">
+				</div>
+			</div>
+		</fieldset>
+		<br>
+		<fieldset id="confirmation_container" class="hidden">
+			<legend>Register Form Confirmation</legend>
+			<div>
+				<label>
+					<span class="form-label">Username</span>
+					<span> : </span>
+					<input class="form-control" type="text" name="usernameconf" disabled="true">
+				</label>
+				<label>
+					<span class="form-label">Date of Birth</span>
+					<span> : </span>
+					<input class="form-control" type="text" name="dobconf" disabled="true">
+				</label>
+				<label>
+					<span class="form-label">Hobby</span>
+					<span> : </span>
+					<input class="form-control" type="text" name="hobbyconf" disabled="true">
+				</label>
+			</div>
+			<div class="center-button">
+				<input type="submit" value="Register">
+			</div>
+		</fieldset>
+	</form>
+</body>
+
+</html>
