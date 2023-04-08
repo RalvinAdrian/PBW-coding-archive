@@ -1,0 +1,110 @@
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(/assets/fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(/assets/fonts/Poppins-Regular.ttf);
+}
+
+html {
+    box-sizing: border-box;
+    /* font-size: 16px; */
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  body {
+    /* background-color: gray; */ 
+    background-color: #ebeeef;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  .main-container {
+    width: 670px;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .flex {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  header {
+    position: relative;
+  }
+
+  header > img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Poppins-bold';
+    font-size:2em;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: .5rem;
+    max-width: 400px;
+    margin: 1rem auto;
+    font-family: 'Poppins-Regular';
+    font-size: 1em;
+    color: #808080;
+  }
+
+  label[for="item"] {
+    grid-column-start: 1;
+  }
+
+  button#addItem {
+    width: fit-content;
+  }
+  
+  button {
+    display: inline-block;
+    color: white;
+    grid-column-start: 2;
+    background-color: #57b846;
+  }
+
+  .listItem {
+    display: flex;
+    flex-direction: column;
+  } 
+
+  #create {
+    border-radius:25px;
+    height: 2rem; 
+  }
