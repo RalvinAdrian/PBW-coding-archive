@@ -1,0 +1,51 @@
+Ralvin Adrian - 6182101024
+
+3a. Mengapa untuk library seperti nodemon dimasukkan sebagai devDependencies bukan dependencies?
+
+karena saat menginstall library nodemon ada argumen --save-dev yang membuat modul library tersebut hanya akan disimpan pada development module saja dan tidak akan dimasukan ke dalam 
+
+
+5a. Perintah apa yang dimasukkan untuk memanggil scripts test di package.json?
+
+npm run test
+
+
+Bagian Web server
+2a. URL apakah yang anda gunakan untuk memunculkan teks Hello World?
+
+http://localhost:8080
+
+
+2b. Port berapa yang digunakan untuk web server ini?
+
+port 8080 adalah port yang di-specify dalam index.js untuk menjalankan http server
+
+2c. Javascript module apa yang digunakan pada kode ini?
+
+module http
+
+3a. Perubahan apa saja yang perlu dilakukan?
+
+megubah : const http = require('http'); 
+menjadi : import * as http from ('http')
+
+
+Bagian Filesystem API
+
+3a. Berdasarkan pengamatan anda, apa fungsi variable request ini?
+
+Mengambil informasi dari http server, beberapa diantaranya adalah untuk :
+
+1. Mengambil url halaman saat ini (url)
+2. Mengambil info method yang digunakan (method)
+3. Mengirimkan data ke server (POST)
+4. Meminta respons dari server(GET)
+
+6a.
+kode js dalam about.html akan dieksekusi setelah index.js dan router.js karena script tersebut berada dalam html maka dijalankan berurutan saat file html tersebut di-load.
+
+
+7a. synchronous lebih boros resource karena semua load akan dieksekusi dalam saat yang bersamaan, dengan asynchronous kita dapat membagi loading time supaya lebih efisien dan tidak memakan resources secara berlebihan.
+
+
+ 
