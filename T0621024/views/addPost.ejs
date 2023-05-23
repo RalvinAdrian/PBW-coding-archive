@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Post</title>
+    <link rel="stylesheet" href="/default.css">
+    <script src="/script.js" defer></script>
+</head>
+
+<body>
+    <%- include('header') %>
+        <div class="main-container">
+            <h1>Add Post</h1>
+            <form action="/add" method="POST">
+                <% if (alert) { %>
+                    <p id="form-alert">
+                        <%= alert %>
+                    </p>
+                    <% } %>
+                        <fieldset>
+                            <legend>Add</legend>
+                            <label for="author">Author:</label>
+                            <%- include('userSelection') %>
+                                <br>
+                                <label for="post">Post:</label>
+                                <textarea name="post" id="post" rows="4" placeholder="Enter your post"></textarea>
+                                <br>
+                                <label for="tags">Tags:</label>
+                                <input type="text" name="tags" id="tags" placeholder="Enter tags">
+                                <br>
+                                <input type="submit" value="Submit">
+                        </fieldset>
+            </form>
+        </div>
+</body>
+
+</html>

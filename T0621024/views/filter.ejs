@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../home.css" />
+</head>
+
+<body>
+    <header>
+        <%- include('header.ejs'); %>
+    </header>
+    <h1>Imaginary Friend Timeline</h1>
+    <div id="postHomePage">
+        <% for(let post of posts){ %>
+            <%if(Object.values(post)[0]===filter|| Object.values(post)[2].split(', ').includes(filter)){%>
+                    <div class="post">
+                        <p><%= Object.values(post)[0]%></p>
+                        <p><%= Object.values(post)[1]%></p>
+                        <p>[Tags]: <%= Object.values(post)[2]%></p>
+                    </div>
+                    <%}%>
+                <%}%>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M06</title>
+  <style>
+    * {
+      text-align: center;
+    }
+  </style>
+  <script type="text/javascript" src="/script.js" defer></script>
+</head>
+
+<body>
+  <h1>Pick Color</h1>
+
+  <p>
+    <% if(color !=='' ) { %>
+      <%= color %>
+        <% } else { %>
+          Click one of these buttons
+          <% } %>
+  </p>
+
+  <form method="GET">
+    <button name="color" value="red">Red</button>
+    <button name="color" value="green">Green</button>
+    <button name="color" value="blue">Blue</button>
+  </form>
+  <br>
+  <form action="" method="POST">
+    <input type="text" name="color" id="inputColor">
+    <button>Submit color</button>
+  </form>
+</body>
+
+</html>

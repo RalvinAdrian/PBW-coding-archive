@@ -1,0 +1,112 @@
+Jawaban modul 06 PBW
+Ralvin Adrian - 6182101024
+
+
+2a. app.set('view engine', 'ejs');
+
+3a. untuk merender file home (karena sudah diset view engine adalah ejs maka cukup tulis home saja)
+
+3b. Router tidak bisa menemukan file home pada path view untuk engine ejs tersebut maka akan keluar error di browsernya.
+
+6a. dengan routing static, kita harus menggunakan beberapa kode dalam baris dibawah ini :
+
+// ini adalah path untuk folder yang berisi file ejs
+const publicSource = path.resolve('public');
+
+// didefine menggunakan express.static untuk membaca path sebelumnya
+app.use(express.static(publicSource));
+// set render / view engine menggunakan ejs
+app.set('view engine', 'ejs');
+
+
+revise by this criteria :
+
+change corresponding code so it can POST color from input type text and change the html color based on three button listed and input type text when the button submit is pressed
+
+index.js :
+import express from 'express';
+import path from 'path';
+import bodyParser from 'body-parser';
+
+const app = express();
+const port = 8080;
+const publicSource = path.resolve('public');
+
+app.use(express.static(publicSource));
+app.set('view engine', 'ejs');
+// buat bodyparser
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.listen(port, () => {
+    console.log('Ready!');
+});
+app.get('/', (req, res) => {
+    let current = '';
+    if (req.query.color !== undefined) {
+        current = req.query.color;
+    }
+
+    res.render('home', {
+        color: current
+    })
+
+})
+
+app.post('/submit', (req, res) => {
+    const color = req.body.color;
+    res.redirect(`/?color=${color}`);
+})
+
+home.ejs
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M06</title>
+  <style>
+    * {
+      text-align: center;
+    }
+  </style>
+  <script type="text/javascript" src="/script.js" defer></script>
+</head>
+
+<body>
+  <h1>Pick Color</h1>
+
+  <p>
+    <% if(color !=='' ) { %>
+      <%= color %>
+        <% } else { %>
+          Click one of these buttons
+          <% } %>
+  </p>
+
+  <form method="GET">
+    <button name="color" value="red">Red</button>
+    <button name="color" value="green">Green</button>
+    <button name="color" value="blue">Blue</button>
+
+  </form>]
+  <form action="" method="POST">
+    <input type="text" name="color" id="inputColor">
+    <button>Submit color</button>
+  </form>
+</body>
+
+</html>
+script.js:
+
+const button = document.querySelectorAll('button');
+const body = document.querySelector('body')
+const p = document.querySelector('p')
+
+window.addEventListener('load', () => {
+    const color = new URLSearchParams(window.location.search).get('color');
+    if (color) {
+        p.textContent = color;
+        body.style.backgroundColor = color;
+        localStorage.setItem('color', color);
+    }
+})

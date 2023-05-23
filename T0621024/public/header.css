@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  header {
+    background-color: orange;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+}
+  
+  header .main-menu a {
+    color: #0038FF;
+    margin-right: 2rem;
+  }
+
+  #selection {
+    width: 5rem;
+  }

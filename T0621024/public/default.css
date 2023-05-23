@@ -1,0 +1,34 @@
+.main-container {
+  margin: 1rem;
+}
+#form-alert {
+  color: red;
+}
+
+fieldset {
+  display: grid;
+  grid-template-columns: 5rem 12rem;
+  gap: 0.4rem;
+  max-width: max-content;
+  padding: .2rem .4rem;
+  overflow: scroll;
+}
+
+label {
+  grid-column-start: 1;
+}
+input,select,textarea {
+  grid-column-start: 2;
+}
+.post-container {
+  margin: .5rem 0;
+  padding: .6rem;
+  border: 1px solid black;
+  max-width: 90vw;
+}
+.post-container p {
+  margin-bottom: .8rem;
+}
+.post-container p:last-child {
+  margin-bottom: .3rem;
+}

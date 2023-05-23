@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="default.css">
+    <script src="/script.js" defer></script>
+</head>
+
+<body>
+    <%- include('header') %>
+        <div class="main-container">
+            <h1>Main Timeline</h1>
+            <% posts.forEach(post=> { %>
+                <div class="post-container">
+                    <p class="post-username">
+                        <%= post.author %>
+                    </p>
+                    <p class="description">
+                        <%= post.post %>
+                    </p>
+                    <p class="tags">
+                        [Tags] : <%= post.tags.join(', ') %>
+                    </p>
+                </div>
+            <% }) %>
+        </div>
+</body>
+
+</html>
