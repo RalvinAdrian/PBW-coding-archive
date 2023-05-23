@@ -4,5 +4,5 @@ const userSelect = document.querySelector('#user');
 filterButton.addEventListener('click', (e) => {
     e.preventDefault();
     const selectedUser = userSelect.value;
-    window.location.href = `/filter:${selectedUser}`;
+    window.location.href = `/filter/:${selectedUser}`;
 });
