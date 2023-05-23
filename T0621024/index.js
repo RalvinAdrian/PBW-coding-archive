@@ -52,9 +52,18 @@ app.post('/add', (req, res) => {
 // })
 
 // todo, fix this naming stuff (data isnt displayed properly either)
-app.get('/filter:author', (req, res) => {
-    const author = req.params.author;
-    const filteredPosts = posts.filter(post => post.author === author);
-    res.render('filter', { posts: filteredPosts, selectedAuthor: author, pageTitle: `${author}'s Timeline` });
-});
+// app.get('/filter:author', (req, res) => {
+//     const author = req.params.author;
+//     const filteredPosts = posts.filter(post => post.author === author);
+//     res.render('filter', { posts: filteredPosts, selectedAuthor: author, pageTitle: `${author}'s Timeline` });
+// });
 
+app.get('/filter/:user', (req, res) => {
+    req.params.user.replaceAll('_', ' ');
+    // console.log('user param: '+req.params.user);
+    res.render('filter', {
+        arrUser: users,
+        posts: posts,
+        filter: req.params.user
+    });
+});
