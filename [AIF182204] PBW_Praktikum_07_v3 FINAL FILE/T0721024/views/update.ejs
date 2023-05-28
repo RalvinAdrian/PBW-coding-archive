@@ -1,0 +1,22 @@
+<%- include('./layout/head.ejs') %>
+	<form method="POST" action="updateUsername">
+		<fieldset>
+			<legend>Update Username</legend>
+			<div class="update-form-grid">
+				<div>ID</div>
+				<div>:</div>
+				<div><input type="text" name="iID"></div>
+				<div>New Username</div>
+				<div>:</div>
+				<div><input type="text" name="iUsername"></div>
+			</div>
+			<input type="submit" value="UPDATE" name='updateUsername'>
+		</fieldset>
+	</form>
+	<br>
+	<a href="users">BACK</a>
+	<% if(selectedId && newUsername) { %>
+		<hr>
+		Username for ID <%= selectedId %> is updated<br>
+			New username: <%= newUsername %>
+				<% } %>

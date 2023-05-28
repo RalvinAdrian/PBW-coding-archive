@@ -1,0 +1,10 @@
+<% const pageCount=Math.ceil(totalRows / show); %>
+
+    <% if (pageCount> 1) { %>
+        <% for (let i=1; i <=pageCount; i++) { %>
+            <a href="/users?page=<%= i %>&start=<%= (i - 1) * show %> &filter=<%= filter %>">
+                <%= i %>
+            </a>
+            <% } %>
+                <% } %>
+                    <br><br>
