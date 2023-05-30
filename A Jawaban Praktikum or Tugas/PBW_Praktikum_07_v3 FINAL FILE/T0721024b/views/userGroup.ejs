@@ -1,0 +1,23 @@
+<%- include('./layout/head.ejs') %>
+	<table>
+		<tr>
+			<th>Role</th>
+		</tr>
+		<% userGroups.forEach(function(userGroup) { %>
+			<tr>
+				<td>
+					<%= userGroup %>
+				</td>
+			</tr>
+			<% }); %>
+	</table>
+
+
+	<hr>
+	<form method="POST" action="addNewRole">
+		<fieldset>
+			<legend>Add New Role</legend>
+			<input type="text" name="iGroup">
+			<input type="submit" value="ADD" name='addNewRole'>
+		</fieldset>
+	</form>

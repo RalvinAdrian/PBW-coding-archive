@@ -1,0 +1,35 @@
+<%- include('./layout/head.ejs') %>
+	<form method="GET" action="/search">
+		<fieldset>
+			<legend>Search by Name</legend>
+			<input type="text" name="filter" value="">
+			<input type="submit" value="SEARCH">
+		</fieldset>
+	</form>
+	<br>
+	<a href="update">UPDATE</a>
+	<a href="userGroup">ROLE</a>
+	<hr>
+	<!-- update jumlah baris & data yg perlu didisplay -->
+	<%- include('./layout/pagination.ejs', { totalRows, show }) %>
+		<table>
+			<tr>
+				<th>User ID</th>
+				<th>Name</th>
+				<th>Role</th>
+			</tr>
+			<!-- pakai data passed from user -->
+			<% user.forEach(function(currentUser) { %>
+				<tr>
+					<td>
+						<%= currentUser.userID %>
+					</td>
+					<td>
+						<%= currentUser.name %>
+					</td>
+					<td>
+						<%= currentUser.role %>
+					</td>
+				</tr>
+				<% }) %>
+		</table>
