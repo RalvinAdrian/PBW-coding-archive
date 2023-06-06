@@ -1,0 +1,20 @@
+Jawaban Modul 08
+Ralvin Adrian - 6182101024
+
+2a. menjalankan fungsi onSubmit dari eventListener dalam form
+
+2b. behaviour tombol submit akan kembali ke default dimana ia akan mem-post / get ke url action yang ada pada tag pembuka form. Namun pada template ini tidak ada action maupun jenis method yang didefine
+
+2c. formElement berisikan HTMLFormelement yaitu setiap elemen form didalam form pada index.html
+
+5a. berdasarkan implementasi challenge maupun normal, parameter yang diberikan adalah object berisikan elemen a,b,operation. berdasarkan requirement nomor 3.
+
+7a. tipenya adalah Promise
+
+7b. response.status = mengembalikan status kode dari request yang diterima (contoh : 404 ketika tidak ditemukan, 200 OK saat request berhasil diterima)
+
+response.text() = mengembalikan data dari respons yang diberikan oleh server
+
+8a. Dengan perubahan tersebut, hasil yang dicetak pada console adalah hasil perhitungan atau pesan kesalahan yang dikirimkan oleh server.
+
+12a. Jika variable headers dihilangkan dari init, maka server tidak akan menerima request dengan format yang benar karena tidak ada predefined type yang diset dalam init tersebut

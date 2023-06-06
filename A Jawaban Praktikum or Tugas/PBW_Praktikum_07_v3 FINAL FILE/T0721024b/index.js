@@ -162,11 +162,12 @@ app.get('/search', (req, res) => {
 });
 
 app.get('/userGroup', (req, res) => {
+    const username = req.session.username || null;
     const query = 'SELECT name FROM usergroups';
     pool.query(query, (err, results) => {
         if (err) throw err;
         const userGroups = results.map((row) => row.name);
-        res.render('userGroup', { userGroups });
+        res.render('userGroup', { userGroups, login: username });
     });
 });
 
